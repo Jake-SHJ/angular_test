@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Workout } from '../workout';
+import { WORKOUTS } from '../mock-workouts';
 
 @Component({
   selector: 'app-workouts',
@@ -7,11 +7,7 @@ import { Workout } from '../workout';
   styleUrls: ['./workouts.component.css'],
 })
 export class WorkoutsComponent implements OnInit {
-  workout: Workout = {
-    id: 0,
-    name: '데드리프트',
-    count: 0,
-  };
+  workouts = WORKOUTS;
   constructor() {}
   ngOnInit(): void {}
 }
